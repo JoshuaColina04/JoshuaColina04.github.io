@@ -1,0 +1,193 @@
+/********************** Hex ****************************/
+
+:root{
+	--bg-color: #fbfbfb;
+	--light-green: #c4ebe7;
+	--dark-green: #0fa69a;
+	--light-grey: #f1f4f7;
+	--dark-grey: #777777;
+	--font-color: #333333;
+	--light-blue: #50b3ff;
+	--hex-size: 125px;
+	--secondary-hex-size: 100px;
+	--text-size: 16px;
+	--secondary-text-size: 12px;
+
+}
+
+.hexagons {
+	display: grid;
+	margin: calc(175px + 10px);
+	position: relative;
+/*	border: 1px solid red;*/
+
+}
+
+.hexagons .hex {
+	grid-area: 1/1;
+	aspect-ratio: 1.15;
+	width: var(--hex-size);
+	height: var(--hex-size);
+	object-fit: cover;
+	clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+	transform: translate(var(--x,0),var(--y,0));
+	cursor: pointer;
+	filter: grayscale(30%); 
+	transition: 0.4s ease-in-out;
+	position: relative;
+	z-index: 1;
+
+}
+
+.hexagons .hex.options {
+	width: var(--secondary-hex-size);
+	height: var(--secondary-hex-size);
+
+}
+
+.hexagons .hex::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.1);
+	transform: skew(25deg);
+
+}
+
+.hexagons .hex.active {
+	filter: grayscale(0);
+/*	transform: translate(var(--x,0),var(--y,0)) scale(0.9);*/
+
+}
+
+.hexagons .hex:hover {
+	filter: grayscale(0);
+	transform: translate(var(--x,0),var(--y,0)) scale(1.1);
+	z-index: 10;
+
+}
+
+.hexagons .hex img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	cursor: pointer;
+	transition: 0.4s ease-in-out;
+
+}
+
+.hexagons .hex h3 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-10%);
+	z-index: 100;
+	text-align: center;
+	font-size: var(--text-size);
+	font-weight: 600;
+	color: black;
+	transition: 0.4s ease-in-out;
+
+}
+
+.hexagons .hex.options h3 {
+	font-size: var(--secondary-text-size);
+
+}
+
+.hexagons .hex img:hover {
+	filter: grayscale(0);
+
+}
+
+.hexagons .hex:hover h3,
+.hexagons .hex.active h3 {
+	color: white;
+
+}
+
+/********************** Hex Positions ****************************/
+
+/********* 1 *********/
+.hexagons > .hex:nth-child(1) { --x: calc(0%); --y: calc(0%); background: #ED4C67; }
+
+/********** 2 ***********/
+.hexagons >  .hex:nth-child(2) { --x: calc(75% + 0.87*10px); --y: calc(-50% - 0.5*10px); background: #ED4C67; opacity: 0; }
+
+/********* 3 ********/
+.hexagons >  .hex:nth-child(3) { --x: calc(0%); --y: calc(-100% - 10px); background: #006266; }
+
+/********* 4 ********/
+.hexagons >  .hex:nth-child(4) { --x: calc(-75% - 0.87*10px); --y: calc(-50% - 0.5*10px); background: #74b9ff; }
+
+/********* 5 ********/
+.hexagons >  .hex:nth-child(5) { --x: calc(-75% - 0.87*10px); --y: calc(50% + 0.5*10px); background: #F79F1F;}
+
+/********* 6 ********/
+.hexagons >  .hex:nth-child(6) { --x: calc(0%); --y: calc(100% + 10px); background: #5758BB;}
+
+/********* 7 ********/
+.hexagons > .hex:nth-child(7) { --x: calc(75% + 0.87*10px); --y: calc(50% + 0.5*10px); background: #C4E538; }
+
+/********* 8 ********/
+.hexagons >  .hex:nth-child(8) { --x: calc(157.5% + 0.87*10px); background: #ffeaa7; }
+
+/********* 9 ********/
+.hexagons >  .hex:nth-child(9) { --x: calc(155% + 0.87*10px); --y: calc(100% + 10px); background: #ffeaa7; opacity: 0; }
+
+/********* 10 ********/
+.hexagons >  .hex:nth-child(10) { --x: calc(75% + 0.87*10px); --y: calc(155% + 0.5*10px); background: #ffeaa7; opacity: 0; }
+
+/********* 11 ********/
+.hexagons >  .hex:nth-child(11) { --x: calc(232.5% + 0.87*15px); --y: calc(150% + 15px); background: #ffeaa7; opacity: 0; }
+
+/********* 12 ********/
+.hexagons >  .hex:nth-child(12) { --x: calc(-150% - 0.87*20px); --y: calc(-100% - 0.5*20px); background: #74b9ff; opacity: 0; }
+
+/********** 13 ***********/
+.hexagons >  .hex:nth-child(13) { --x: calc(110.5% + 0.87*10px); --y: calc(-172.5% - 0.5*10px); background: #ED4C67; opacity: 0; }
+
+/********** 14 ***********/
+.hexagons >  .hex:nth-child(14) { --x: calc(197.5% + 0.87*10px); --y: calc(-112.5% - 0.5*10px); background: #ED4C67; opacity: 0; }
+
+/********** 15 ***********/
+.hexagons >  .hex:nth-child(15) { --x: calc(197.5% + 0.87*10px); --y: calc(-225.5% - 0.5*10px); background: #ED4C67; opacity: 0; }
+
+
+/********************** Keyframes Animations ****************************/
+
+/*@keyframes rotateHex {
+	0% {
+		transform: rotate(0deg);
+		
+	
+	}
+
+	25% {
+		transform: rotate(15deg);
+		
+	
+	}
+
+	50% {
+		transform: rotate(0deg);
+		
+	
+	}
+
+	75% {
+		transform: rotate(-15deg);
+
+	}
+
+	100% {
+		transform: rotate(0deg);
+		
+	}
+
+}*/

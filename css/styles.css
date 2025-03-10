@@ -1,0 +1,339 @@
+/********************** Imports ****************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/************************ Body *****************************/
+
+:root{
+	--bg-color: #fbfbfb;
+	--light-green: #c4ebe7;
+	--dark-green: #0fa69a;
+	--light-grey: #f1f4f7;
+	--dark-grey: #777777;
+	--font-color: #333333;
+	--light-blue: #50b3ff;
+
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+/*	border: 1px solid blue;*/
+
+}
+
+body {
+	background: var(--bg-color);
+	font-family: 'Raleway', serif;
+	/*font-weight: 500;*/
+
+}
+
+/************************ Header *****************************/
+
+header {
+	position: relative;
+	width: 100%;
+	height: 120px;
+	padding: 0 7.5%;
+
+}
+
+header .logo {
+	width: 60px;
+	height: 75px;
+
+}
+
+header .logo img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+
+} 
+
+header .grettings {
+	position: absolute;
+	top:25%;
+	font-weight: 900;
+
+}
+
+header .grettings p {
+	text-transform: uppercase;
+	color: var(--font-color);
+
+}
+
+header .btn {
+	position: absolute;
+	top: 50%;
+	width: 140px;
+	display: flex;
+
+}
+
+header .btn button {
+	width: 100%;
+	height: 100%;
+	padding: 5px 10px;
+	font-size: 15px;
+	font-weight: 400;
+	color: var(--font-color);
+	border-radius: 4px;
+	/*background: ;*/
+	/*letter-spacing: 1px;*/
+	border: 2px dashed green;
+	transition: 0.5s ease;
+
+} 
+
+
+header .btn button:hover {
+	background: var(--light-green);
+
+}
+ 
+
+ /************************ Main *****************************/
+
+/******** Homer ********/
+
+main .homer {
+	width: 100%;
+	padding: 0 7.5%;
+	margin-bottom: 35px;
+
+}
+
+main .homer .container {
+	background: #fff;
+	/*box-shadow: 0 7px 15px rgba( 238, 238, 238 ,0.7);*/
+	border-radius: 7px;
+	height: 800px;
+	transition: 0.5s ease;
+/*	display: flex;*/
+
+}
+
+main .homer .container:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 7px 15px rgba( 238, 238, 238 ,0.7);
+
+}
+
+.homer .container .msj {
+	position: relative;
+	top: 15px;
+	left: 25px;
+	/*font-size: 20px;*/
+	color: var(--font-color);
+	font-weight: 400;
+	height: 10%;
+
+}
+
+.homer .container .HoneyComb {
+	background: #fff;
+	/*height: 90%;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+/******** Backlog ********/
+
+main .backlog {
+	width: 100%;
+	height: 400px;
+	padding: 0 7.5%;
+	display: flex;
+	justify-content: center;
+	align-content: space-between;
+
+}
+
+.backlog .blog {
+	width: 950px;
+	background: #fff;
+	margin-right: 35px;
+	/*box-shadow: 0 7px 15px rgba( 238, 238, 238 ,0.5);*/
+	border-radius: 7px;
+	transition: 0.5s ease;
+	/*position: relative;*/
+
+}
+
+.backlog .blog:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 7px 15px rgba( 238, 238, 238 ,0.7);
+
+}
+
+.backlog .blog .top {
+	width: 100%;
+	height: 100px;
+	position: relative;
+	top: 15px;
+	left: 25px;
+
+}
+
+.backlog .blog .content {
+	width: 100%;
+	height: 230px;
+	padding: 0 25px;
+
+}
+
+.backlog .blog .content .title-header {
+	display: flex;
+	justify-content: flex-start;
+	color: var(--font-color);
+
+}
+
+.backlog .blog .content .workarea {
+	height: 200px;
+	padding-top: 5px;
+	margin-top: 7.5px;
+	color: var(--font-color);
+	overflow-y: scroll;
+	/*border: 2px solid red;*/
+
+}
+
+.backlog .blog .bottom { 
+	width: 100%;
+	height: 70px;
+	display: flex;
+	padding: 0 25px;
+	color: var(--font-color);
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.backlog .blog .bottom button {
+	width: 110px;
+	/*height: 40px;*/
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 1.5;
+	border: none;
+	border-radius: 4px;
+	transition: 0.5s ease;
+
+} 
+
+.backlog .blog .bottom button:hover {
+	border: 1px solid var(--dark-grey);
+
+}
+
+.backlog .blog .top input {
+	position: relative;
+	top: 10px;
+	width: 250px;
+	height: 30px;
+	transition: 0.3s ease;
+	box-shadow: 0 0 10px var(--light-grey);
+
+}
+
+.backlog .blog .top input:hover {
+	box-shadow: 0 0 5px var(--light-blue);
+
+}
+
+.backlog .blog .content .title-header h4:nth-child(1) {
+
+}
+
+.backlog .blog .content .title-header h4:nth-child(2) {
+	position: relative;
+	left:15px;
+
+}
+
+.backlog .blog .content .title-header h4:nth-child(3) {
+	position: relative;
+	left:25px;
+
+}
+
+.backlog .blog .content .title-header h4:nth-child(4) {
+	position: relative;
+	left:220px;
+}
+
+.backlog .blog .content .title-header h4:nth-child(5) {
+	position: relative;
+	left:275px;
+}
+
+.backlog .blog .content .title-header h4:nth-child(6) {
+	position: relative;
+	left:325px;
+}
+
+.backlog .comic {
+	background: #fff;
+	width: 275px;
+	height: 300px;
+	/*box-shadow: 0 7px 15px rgba( 238, 238, 238 ,0.5);*/
+	border-radius: 7px;
+	transition: 0.5s ease;
+
+}
+
+.backlog .comic:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 7px 15px rgba( 238, 238, 238 ,0.7);
+
+}
+
+
+.backlog .comic .comic-content {
+	padding: 15px 25px;
+
+}
+
+.backlog .comic .comic-content .title {
+	color: var(--font-color);
+	font-weight: 500;
+	font-size: 15px;
+	text-align: center;
+	margin-bottom: 3.5px;
+
+}
+
+.backlog .comic .comic-content img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	
+}
+
+ /************************ Footer *****************************/
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 60px;
+
+}
+
+footer h5 {
+	/*font-size: 14px;*/
+	color: var(--font-color);
+	font-weight: 500;
+
+}
+
